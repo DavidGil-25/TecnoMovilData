@@ -25,7 +25,8 @@ src/tecnomovil/
 │   └── GeneradorDatos.java       generador de datos simulados (reproducible con semilla)
 ├── analisis/
 │   └── AnalizadorTransporte.java las seis tareas, como funciones puras
-└── Main.java                     ejecuta todas las tareas y muestra los resultados
+├── Main.java                     ejecuta todas las tareas y muestra los resultados
+└── PruebasAnalizador.java        18 pruebas de verificación con datos calculados a mano
 capturas/                         evidencias de ejecución
 informe/                          informe final en PDF (APA 7.ª edición)
 ```
@@ -47,6 +48,14 @@ java -cp bin tecnomovil.Main
 javac -encoding UTF-8 -d bin $(find src -name "*.java")
 java -cp bin tecnomovil.Main
 ```
+
+**Pruebas de verificación** (sin JUnit, solo Java estándar):
+
+```
+java -cp bin tecnomovil.PruebasAnalizador
+```
+
+Al final debe aparecer `Pruebas correctas: 18 de 18`.
 
 También se puede ejecutar desde VS Code abriendo `Main.java` y usando **Run** sobre el método `main`.
 
