@@ -86,3 +86,11 @@ Con 1000 usuarios y semilla 42 se generan 5058 registros. Al final de la ejecuci
 ```
 Resultado secuencial == paralelo: true
 ```
+## Explicación de las tareas a), b) y c)
+**Función base (contarIngresosPor). **Recibe los registros y un criterio de agrupación. Primero filtra las entradas, luego las organiza de acuerdo con dicho criterio y, finalmente, cuenta los elementos de cada grupo. Las tareas a), b) y c) reutilizan esta función, modificando únicamente el criterio de agrupación.
+
+**a) Afluencia por estación. **Utiliza la función base para agrupar los ingresos según la estación.
+
+**b) Horas pico. **Agrupa los ingresos por hora, ordena los resultados de mayor a menor cantidad de flujo y selecciona las primeras horas. En caso de empate, se prioriza la hora más temprana.
+
+**c) Rutas más utilizadas. **Sigue el mismo procedimiento que el apartado b), **pero agrupando los ingresos según la ruta.
