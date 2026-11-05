@@ -1,0 +1,10 @@
+# Archivos compilados
+bin/
+*.class
+
+# Configuración local del editor
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
