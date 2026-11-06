@@ -94,3 +94,19 @@ Resultado secuencial == paralelo: true
 **b) Horas pico. **Agrupa los ingresos por hora, ordena los resultados de mayor a menor cantidad de flujo y selecciona las primeras horas. En caso de empate, se prioriza la hora más temprana.
 
 **c) Rutas más utilizadas. **Sigue el mismo procedimiento que el apartado b), **pero agrupando los ingresos según la ruta.
+
+## Explicación de las tareas d), e) y f)
+
+*d) Patrones de viaje (patronesDeViaje).* Agrupa los registros por usuario y,
+para cada uno, guarda en una lista las estaciones en el orden en que aparecen.
+El mapa y las listas que devuelve no se pueden modificar.
+
+*e) Tiempo promedio entre estaciones (tiempoPromedioEntreEstaciones).*
+Ordena por hora los registros de cada usuario y empareja cada entrada con la salida
+que le sigue en la misma ruta. Esa diferencia de tiempo es un trayecto. Luego agrupa
+los trayectos por ruta, origen y destino, y calcula el promedio en minutos.
+Se usan segundos enteros para que el resultado sea igual en modo secuencial y paralelo.
+
+*f) Sobrecarga en rutas (detectarSobrecarga).* Cuenta los ingresos de cada ruta
+por hora y toma la hora más cargada como su ocupación pico. Si supera el umbral
+que recibe como parámetro, la ruta se marca como crítica.
